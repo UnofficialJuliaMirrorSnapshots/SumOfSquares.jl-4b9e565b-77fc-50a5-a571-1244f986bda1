@@ -9,21 +9,13 @@ This packages contains the Sum of Squares reformulation for polynomial optimizat
 When used in conjunction with [MultivariatePolynomial](https://github.com/JuliaAlgebra/MultivariatePolynomials.jl) and [PolyJuMP](https://github.com/JuliaOpt/PolyJuMP.jl), it provides a Sum of Squares Programming extension for [JuMP](https://github.com/JuliaOpt/JuMP.jl).
 Enabling the creation of sum of squares variables and constraints.
 
-## Installation
-
-The `master` branch of this package works with the JuMP v0.19. To try this
-package with JuMP v0.19, do:
-```julia
-] add PolyJuMP#master
-] add SumOfSquares#master
-```
-
 ## Documentation
 
 - [**STABLE**][docs-stable-url] &mdash; **most recently tagged version of the documentation.**
 - [**LATEST**][docs-latest-url] &mdash; *in-development version of the documentation.*
 
 Some presentations on, or using, SumOfSquares:
+  * Benoît Legat at the [juliaday Nantes 2019](https://julialang.univ-nantes.fr/programme/) [[Slides](https://drive.google.com/open?id=1pN3G9Pr8jbzK9EEaJ9a6p_qKwSbxb2bo)]
   * Benoît Legat at the [Summer School on Numerical Computing in Algebraic Geometry 2018](https://www.mis.mpg.de/calendar/conferences/2018/nc2018.html) [[Poster](https://drive.google.com/open?id=1pf9rdoVEjAnD164rptLki1AG0AH4i88M)]
   * Benoît Legat at the [JuMP Meetup 2017](http://www.juliaopt.org/meetings/mit2017/) [[Slides](http://www.juliaopt.org/meetings/mit2017/legat.pdf)] [[Video](https://youtu.be/kyo72yWYr54)]
   * [Joey Huchette at SIAM Opt 2017](https://docs.google.com/presentation/d/1ASfjB1TdLJmYxT0b6rnyGh9eLbMc-66bTOt3_3yvc90/edit?usp=sharing)
