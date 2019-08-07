@@ -12,6 +12,9 @@ end
 @testset "Bivariate quadratic" begin
     include("bivariate_quadratic.jl")
 end
+@testset "Choi" begin
+    include("choi.jl")
+end
 @testset "Concave then convex cubic" begin
     include("concave_then_convex_cubic.jl")
 end
@@ -20,6 +23,9 @@ end
 end
 @testset "Lyapunov Switched System" begin
     include("lyapunov_switched_system.jl")
+end
+@testset "Motzkin" begin
+    include("motzkin.jl")
 end
 @testset "BPT12e399" begin
     include("BPT12e399.jl")
