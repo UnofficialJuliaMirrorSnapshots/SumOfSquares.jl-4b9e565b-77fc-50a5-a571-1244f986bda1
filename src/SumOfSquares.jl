@@ -13,8 +13,16 @@ Reexport.@reexport using SemialgebraicSets
 Reexport.@reexport using MultivariateMoments
 
 include("gram_matrix.jl")
-include("sosdec.jl")
-include("newton_polytope.jl")
+
+using PolyJuMP
+abstract type SOSLikeCone <: PolyJuMP.PolynomialSet end
+Base.broadcastable(cone::SOSLikeCone) = Ref(cone)
+# FIXME Maybe replace by PSDLike MOI sets
+
+function matrix_cone_type end
+
+include("Certificate.jl")
+include("rand.jl")
 
 # MOI extension
 
@@ -52,6 +60,7 @@ include("scaled_diagonally_dominant_bridge.jl")
 
 Reexport.@reexport using JuMP
 
+include("sosdec.jl")
 include("utilities.jl")
 include("variable.jl")
 include("constraint.jl")
