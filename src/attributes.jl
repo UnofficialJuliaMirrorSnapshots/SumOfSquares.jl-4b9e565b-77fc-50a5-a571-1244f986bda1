@@ -54,6 +54,15 @@ function MOI.is_set_by_optimize(::Union{CertificateMonomials,
     return true
 end
 
+# If a variable is bridged, the `VectorOfVariables`-in-`SOSPolynomialSet` is
+# bridged by `MOI.Bridges.Constraint.VectorFunctionizeBridge` and it has
+# to pass the constraint to the SOS bridge.
+function MOI.Bridges.Constraint.invariant_under_function_conversion(::Union{
+    CertificateMonomials, GramMatrixAttribute,
+    MomentMatrixAttribute, LagrangianMultipliers})
+    return true
+end
+
 # This is type piracy but we tolerate it.
 const ObjectWithoutIndex = GramMatrix{<:MOI.Utilities.ObjectWithoutIndex}
 const ObjectOrTupleWithoutIndex = Union{ObjectWithoutIndex, Tuple{Vararg{ObjectWithoutIndex}}}
